@@ -1,0 +1,1 @@
+# github-search-react-ts-redux-thunk-rtl
