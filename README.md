@@ -1,4 +1,4 @@
-# GitHub Search
+# [GitHub Search](https://sam-shpakov-github-search-react-ts-redux-thunk-rtl.netlify.app)
 
 <span style='font-size: 18px; margin: 0 5px;'> This Pet Project, but allows you to see the quality of the code that I use on real projects.</span>
 
@@ -23,7 +23,7 @@
 - <span style='font-size: 15px; margin: 0 5px;'>Visibility of technology differences;</span>
 <hr>
 
-### You can access: [GitHub Search](https://cv-test-cv.netlify.app) to try find someone.
+### You can access: [GitHub Search](https://sam-shpakov-github-search-react-ts-redux-thunk-rtl.netlify.app) to try find someone.
 
 <hr>
 <span style='font-size: 15px; margin: 0 15px;'>Technology stack in this repository:</span>
