@@ -58,6 +58,7 @@
         "avoidEscape": true
       }
     ],
+    "import/no-cycle": 0,
     "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/member-delimiter-style": [
       "error",

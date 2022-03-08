@@ -1,9 +1,10 @@
 import '@/assets/stylesheets/index.scss';
 
-import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+
+import React from 'react';
 
 import App from '@/App';
 import { store } from '@/redux-folder';
@@ -16,5 +17,5 @@ ReactDOM.render(
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );
