@@ -1,0 +1,3 @@
+type IError = {
+  message: string;
+};

@@ -1,13 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import LazyImagesExample from '@/components/LazyImagesExample';
-import TableExample from '@/components/TableExample';
+import { RoutesPages } from '@/pages';
 
-const App = (): JSX.Element => (
-  <Fragment>
-    <TableExample />
-    <LazyImagesExample />
-  </Fragment>
-);
+const App = (): JSX.Element => <RoutesPages />;
 
 export default App;
