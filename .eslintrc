@@ -1,27 +1,30 @@
 {
   "env": {
-    "es6": true,
-    "browser": true,
+    "es2021": true,
     "node": true
   },
   "extends": [
-    "airbnb-typescript",
+    "airbnb",
     "airbnb/hooks",
+    "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "ecmaVersion": 6,
-    "sourceType": "module",
+    "project": "tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react-hooks", "jsx-a11y", "import", "react", "prettier"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "jsx-a11y", "import", "prettier"],
   "settings": {
+    "import/no-unresolved": "error",
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
     },
@@ -36,6 +39,9 @@
       "node": {
         "paths": ["src"]
       }
+    },
+    "react": {
+      "version": "detect"
     }
   },
   "rules": {
@@ -67,11 +73,11 @@
       }
     ],
     "@typescript-eslint/dot-notation": "off",
+    "import/prefer-default-export": "off",
     "arrow-parens": ["error", "as-needed"],
-    // "camelcase": "error",
+    "camelcase": "error",
     "comma-dangle": ["error", "always-multiline"],
     "eol-last": "error",
-    "semi": "error",
     "id-blacklist": [
       "error",
       "any",
@@ -87,8 +93,22 @@
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "groups": [
+          "external",
+          "builtin",
+          "index",
+          "sibling",
+          "parent",
+          "object",
+          "type",
+          "internal"
+        ],
         "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          },
           {
             "pattern": "@/**/*.pcss",
             "group": "index"
@@ -98,6 +118,7 @@
             "group": "internal"
           }
         ],
+        "pathGroupsExcludedImportTypes": ["react"],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
@@ -123,8 +144,11 @@
     "no-console": "error",
     "no-alert": "error",
     "no-var": "error",
-    "no-multiple-empty-lines": "error",
+    "no-multiple-empty-lines": [2, { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
     "no-await-in-loop": "off",
+    "no-trailing-spaces": ["error", { "ignoreComments": true }],
+    "no-return-await": "error",
+    "object-curly-spacing": [2, "always"],
     "prefer-const": "error",
     "prefer-destructuring": [
       "error",
@@ -135,6 +159,9 @@
     ],
     "radix": "error",
     "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": [
@@ -145,14 +172,9 @@
     ],
     "react/jsx-fragments": ["error", "element"],
     "react/jsx-props-no-spreading": "off",
+    "react/function-component-definition": "off",
     "react/require-default-props": "off",
-    "space-before-function-paren": [
-      "error",
-      {
-        "anonymous": "always",
-        "named": "never"
-      }
-    ],
+    "space-before-function-paren": ["error", "always"],
     "spaced-comment": [
       "error",
       "always",

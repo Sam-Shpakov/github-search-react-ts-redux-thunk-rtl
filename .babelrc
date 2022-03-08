@@ -10,10 +10,17 @@
   ],
   "plugins": [
     [
-      "module-resolver", {
+      "module-resolver",
+      {
         "alias": {
           "@/": "src/"
         }
+      }
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
       }
     ]
   ]

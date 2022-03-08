@@ -24,7 +24,11 @@ const MainPage = (): JSX.Element => {
         {dataMain.loading ? (
           <div className={styles['main-text']}>Loading...</div>
         ) : (
-          dataMain.data.map(item => <div key={item.id}>{item.name}</div>)
+          dataMain.data.map(item => (
+            <div className={styles['main-text']} key={item.id}>
+              {item.name}
+            </div>
+          ))
         )}
       </div>
     </div>

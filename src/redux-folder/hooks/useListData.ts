@@ -1,5 +1,6 @@
-import { useCallback, useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+
+import { useCallback, useEffect } from 'react';
 
 import allActions from '@/redux-folder/actions';
 import type { RootState } from '@/redux-folder/store';
