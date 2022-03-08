@@ -21,7 +21,11 @@ const MainPage = (): JSX.Element => {
     <div className={styles['main-container']}>
       <Header isActive={[true, false]} />
       <div className={styles['main-content']}>
-        {dataMain.loading ? <div className={styles['main-text']}>Loading...</div> : 'Main Page'}
+        {dataMain.loading ? (
+          <div className={styles['main-text']}>Loading...</div>
+        ) : (
+          dataMain.data.map(item => <div key={item.id}>{item.name}</div>)
+        )}
       </div>
     </div>
   );

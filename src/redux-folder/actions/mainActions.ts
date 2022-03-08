@@ -24,7 +24,6 @@ const getData = () => async (dispatch: Dispatch<MainActionTypes>) => {
   try {
     const response = await fetchData<IResponse>();
     dispatch(setSuccess(formatServerDataToData(response.data)));
-    dispatch(setSuccess([]));
   } catch (e) {
     dispatch(setError(e as IError));
   }
