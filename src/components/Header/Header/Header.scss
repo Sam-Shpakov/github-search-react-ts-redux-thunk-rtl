@@ -1,0 +1,32 @@
+.header {
+  &-container {
+    height: 62px;
+    padding: 5px 16px;
+    background-color: var(--background-color-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: var(--color-header-text);
+    transition: background-color 200ms linear;
+    transition: color 500ms linear;
+
+    @media (max-width: 560px) {
+      padding: 5px 8px;
+    }
+  }
+
+  width: 150px;
+
+  &-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-header-logo);
+    text-align: center;
+    transition: color 500ms linear;
+
+    @media (max-width: 560px) {
+      width: 70px;
+    }
+  }
+}

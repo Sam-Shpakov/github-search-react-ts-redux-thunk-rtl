@@ -10,7 +10,7 @@ const MainPage = (): JSX.Element => {
   if (dataMain.error) {
     return (
       <div className={styles['main-container']}>
-        <Header isActive={[true, false]} />
+        <Header />
         <div className={styles['main-content']}>
           <div className={styles['main-text']}>Error: {dataMain.error}</div>
         </div>
@@ -19,7 +19,7 @@ const MainPage = (): JSX.Element => {
   }
   return (
     <div className={styles['main-container']}>
-      <Header isActive={[true, false]} />
+      <Header />
       <div className={styles['main-content']}>
         {dataMain.loading ? (
           <div className={styles['main-text']}>Loading...</div>

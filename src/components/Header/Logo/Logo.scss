@@ -1,0 +1,31 @@
+.logo {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 16px;
+
+    @media (max-width: 560px) {
+      padding: 5px 8px;
+    }
+  }
+
+  &-link {
+    width: 2rem;
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.white {
+  color: white;
+
+  &:hover {
+    color: #afb8c1;
+  }
+}
