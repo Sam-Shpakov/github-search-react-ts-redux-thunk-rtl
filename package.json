@@ -29,6 +29,7 @@
     "svgo-all": "cross-env svgo -r -f ./src ./src --pretty --indent=2"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.10",
     "@babel/core": "^7.17.5",
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
@@ -47,6 +48,7 @@
     "@types/webpack-dev-server": "^4.7.1",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
+    "apollo-link-context": "^1.0.20",
     "babel-loader": "^8.2.3",
     "babel-plugin-module-resolver": "^4.1.0",
     "classnames": "^2.3.1",

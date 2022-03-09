@@ -1,0 +1,19 @@
+.loading {
+  &-container {
+    width: 100%;
+    height: calc(100vh - 62px);
+    background: var(--color-border-muted);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    transition: opacity 500ms linear;
+  }
+
+  &-icon {
+    width: 10vw;
+    margin-bottom: 2rem;
+  }
+}
