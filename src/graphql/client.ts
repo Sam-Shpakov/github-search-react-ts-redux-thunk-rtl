@@ -8,11 +8,10 @@ const httpLink = createHttpLink({
   uri: uriHTTP,
 });
 
-const token1 = 'm6X7LfqvGBLFFiB1';
-const token2 = '2fNNlN3dttsW';
+const token1 = 'UxSn1tUwVHu';
+const token2 = 'gzA4IvObQ4ZktcR';
 const authLink = setContext((_, { headers }) => {
-  const token = `ghp_RW${token1}K5XW9w${token2}`;
-  // const token = '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';
+  const token = `ghp_Yj${token1}LtNu5vbk${token2}`;
   return {
     headers: {
       ...headers,
