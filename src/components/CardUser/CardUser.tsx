@@ -17,17 +17,21 @@ const CardUser: FunctionComponent<ListUsersProps> = ({ data }): JSX.Element => (
     </Link>
     <div className={styles['card-text']}>
       <div className={styles['card-p']}>
+        <span>Name:</span>
         <Link to={`/user_${data.login}`} className={styles['card-nickname']}>
           {data.login}
         </Link>
       </div>
       <div className={styles['card-p']}>
+        <span>Username:</span>
         <Link to={`/user_${data.login}`} className={styles['card-nickname']}>
           {data.login}
         </Link>
-        <span>sdasd</span>
-        <Link to={`/user_${data.login}`} className={styles['card-name']}>
-          {data.name}
+      </div>
+      <div className={styles['card-p']}>
+        <span>name:</span>
+        <Link to={`/user_${data.login}`} className={styles['card-nickname']}>
+          {data.login}
         </Link>
       </div>
     </div>

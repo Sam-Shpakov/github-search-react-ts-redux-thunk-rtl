@@ -32,11 +32,20 @@
     font-size: 1rem;
   }
 
+  &-p {
+    margin: 5px 20px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
   &-link {
     color: var(--color-fg-default);
     text-decoration: none;
     &:hover {
-      color: var(--color-hover-text );
+      color: var(--color-hover-text);
     }
   }
 }
