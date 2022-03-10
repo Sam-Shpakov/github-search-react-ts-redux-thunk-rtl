@@ -92,7 +92,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 
-    &:hover {
+    &:hover:enabled {
       color: var(--color-btn-hover-text);
       background-color: var(--color-btn-hover-bg);
       border-color: var(--color-btn-hover-border);

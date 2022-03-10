@@ -2,7 +2,7 @@
   &-container {
     width: 100%;
     height: calc(100vh - 62px);
-    background: var(--color-border-muted);
+    background: var(--background-color-loading);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,10 +10,30 @@
     position: fixed;
     z-index: 999;
     transition: opacity 500ms linear;
+    -webkit-animation: blink 3s linear infinite;
+    animation: blink 3s linear infinite;
   }
 
-  &-icon {
-    width: 10vw;
-    margin-bottom: 2rem;
+  @-webkit-keyframes blink {
+    0% {
+      color: rgba(34, 34, 34, 1);
+    }
+    50% {
+      color: rgba(34, 34, 34, 0.3);
+    }
+    100% {
+      color: rgba(34, 34, 34, 1);
+    }
+  }
+  @keyframes blink {
+    0% {
+      color: rgba(34, 34, 34, 1);
+    }
+    50% {
+      color: rgba(34, 34, 34, 0.3);
+    }
+    100% {
+      color: rgba(34, 34, 34, 1);
+    }
   }
 }

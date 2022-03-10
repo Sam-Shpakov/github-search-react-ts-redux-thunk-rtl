@@ -18,6 +18,7 @@ body {
 html[data-theme='light'] {
   --color-fg-default: #24292f;
   --background-color: #ffffff;
+  --background-color-loading: rgba(146, 146, 146, 0.5);
   --color-border-default: #d0d7de;
 
   --color-header-logo: #ffffff;
@@ -64,6 +65,7 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
   --color-fg-default: #f0f3f6;
   --background-color: #0a0c10;
+  --background-color-loading: rgba(146, 146, 146, 0.5);
   --color-border-default: #d0d7de;
 
   --color-header-logo: #ffffff;
