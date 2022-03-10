@@ -1,7 +1,8 @@
 import React from 'react';
 
-import CustomizedScrollBar from '@/components/CustomizedScrollBar';
+import FormSearch from '@/components/FormSearch';
 import Header from '@/components/Header';
+import ListUsers from '@/components/ListUsers';
 import Loading from '@/components/Loading';
 import styles from '@/pages/MainPage/MainPage.scss';
 import useListData from '@/redux-folder/hooks';
@@ -23,17 +24,12 @@ const MainPage = (): JSX.Element => {
     <div className={styles['main-container']}>
       <Header />
       <div className={styles['main-content']}>
-        <CustomizedScrollBar>
-          {dataMain.loading ? (
-            <Loading />
-          ) : (
-            dataMain.data.map(item => (
-              <div className={styles['main-text']} key={item.id}>
-                {item.name}
-              </div>
-            ))
-          )}
-        </CustomizedScrollBar>
+        <FormSearch
+          nameButton="Search"
+          onSubmit={() => {}}
+          labelText="Search by username, full name, or email address"
+        />
+        {dataMain.loading ? <Loading /> : <ListUsers data={dataMain.data} />}
       </div>
     </div>
   );
