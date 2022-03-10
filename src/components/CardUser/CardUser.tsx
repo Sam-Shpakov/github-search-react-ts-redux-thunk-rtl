@@ -18,19 +18,19 @@ const CardUser: FunctionComponent<ListUsersProps> = ({ data }): JSX.Element => (
     <div className={styles['card-text']}>
       <div className={styles['card-p']}>
         <span>Name:</span>
-        <Link to={`/user_${data.login}`} className={styles['card-nickname']}>
+        <Link to={`/user_${data.login}`} className={styles['card-link']}>
           {data.login}
         </Link>
       </div>
       <div className={styles['card-p']}>
         <span>Username:</span>
-        <Link to={`/user_${data.login}`} className={styles['card-nickname']}>
+        <Link to={`/user_${data.login}`} className={styles['card-link']}>
           {data.login}
         </Link>
       </div>
       <div className={styles['card-p']}>
         <span>name:</span>
-        <Link to={`/user_${data.login}`} className={styles['card-nickname']}>
+        <Link to={`/user_${data.login}`} className={styles['card-link']}>
           {data.login}
         </Link>
       </div>
