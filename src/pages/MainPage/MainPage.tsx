@@ -8,7 +8,7 @@ import styles from '@/pages/MainPage/MainPage.scss';
 import useListData from '@/redux-folder/hooks';
 
 const MainPage = (): JSX.Element => {
-  const { dataMain } = useListData();
+  const { searchUsers, dataMain } = useListData();
 
   if (dataMain.error) {
     return (
@@ -26,7 +26,7 @@ const MainPage = (): JSX.Element => {
       <div className={styles['main-content']}>
         <FormSearch
           nameButton="Search"
-          onSubmit={() => {}}
+          onSubmit={searchUsers}
           labelText="Search by username, full name, or email address"
         />
         {dataMain.loading ? <Loading /> : <ListUsers data={dataMain.data} />}

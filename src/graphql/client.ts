@@ -1,16 +1,15 @@
 import { ApolloClient, createHttpLink, InMemoryCache, ApolloLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-const uriHTTP = 'https://wishboard-server.herokuapp.com/graphql';
+const uriHTTP = 'https://api.github.com/graphql';
 const cache = new InMemoryCache();
 
 const httpLink = createHttpLink({
   uri: uriHTTP,
-  credentials: 'include',
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = 'UserUtils.getTokenFromLocalStorage()';
+  const token = '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';
   return {
     headers: {
       ...headers,

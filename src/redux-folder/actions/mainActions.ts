@@ -1,9 +1,9 @@
+import { ApolloQueryResult } from '@apollo/client';
 import { Dispatch } from 'redux';
 
-// import type { RootState } from '@/redux-folder/store';
-import { fetchData } from '@/services';
-import { MainActionTypes, MainConstantTypes, TData, IResponse } from '@/types/mainStore';
-import { formatServerDataToData } from '@/utils/middleware-data';
+import client from '@/graphql/client';
+import * as UserRequests from '@/graphql/query';
+import { MainActionTypes, MainConstantTypes, TResponceUsers, TData } from '@/types/mainStore';
 
 const setLoading = (): MainActionTypes => ({
   type: MainConstantTypes.GET_DATA_LOADING,
@@ -19,14 +19,24 @@ const setSuccess = (data: TData[]): MainActionTypes => ({
   payload: data,
 });
 
-const getData = () => async (dispatch: Dispatch<MainActionTypes>) => {
+const searchUsers = (user: string) => (dispatch: Dispatch<MainActionTypes>) => {
   dispatch(setLoading());
-  try {
-    const response = await fetchData<IResponse>();
-    dispatch(setSuccess(formatServerDataToData(response.data)));
-  } catch (e) {
-    dispatch(setError(e as IError));
-  }
+
+  client
+    .query({
+      query: UserRequests.FETCH_USERS_QUERY,
+      fetchPolicy: 'no-cache',
+      variables: {
+        user,
+      },
+    })
+    .then(({ data }: ApolloQueryResult<any>) => {
+      const newData = data as TResponceUsers;
+      dispatch(setSuccess(newData.search.nodes));
+    })
+    .catch((error: IError) => {
+      dispatch(setError(error));
+    });
 };
 
-export default { getData };
+export default { searchUsers };

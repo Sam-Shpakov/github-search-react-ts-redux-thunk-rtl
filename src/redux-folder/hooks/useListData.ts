@@ -1,27 +1,21 @@
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 
 import allActions from '@/redux-folder/actions';
 import type { RootState } from '@/redux-folder/store';
 
 const useListData = () => {
-  const getMainData = allActions.mainActions.getData;
+  const getMainData = allActions.mainActions.searchUsers;
   const dataMain = useSelector((state: RootState) => state.main, shallowEqual);
   const dispatch = useDispatch();
-  const getData = useCallback(() => dispatch(getMainData()), [dispatch]);
+  const getData = useCallback((user: string) => dispatch(getMainData(user)), [dispatch]);
 
-  useEffect(() => {
-    let mounted = true;
-    if (mounted) {
-      getData();
-    }
-    return () => {
-      mounted = false;
-    };
-  }, []);
+  const searchUsers = (user: string) => {
+    getData(user);
+  };
 
-  return { dataMain };
+  return { dataMain, searchUsers };
 };
 
 export default useListData;

@@ -1,3 +1,3 @@
-import FETCH_ALARMS_QUERY from '@/graphql/query/query-get-alarms';
+import FETCH_USERS_QUERY from '@/graphql/query/query-get-users';
 
-export { FETCH_ALARMS_QUERY };
+export { FETCH_USERS_QUERY };

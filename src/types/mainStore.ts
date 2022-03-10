@@ -10,21 +10,6 @@ export interface IStateMain {
   data: TData[];
 }
 
-export interface IResponse {
-  data: FetchData[];
-}
-
-export type FetchData = {
-  id: string;
-  first_name: string;
-  last_name: string;
-};
-
-export type TData = {
-  id: string;
-  name: string;
-};
-
 export type MainAction = {
   type: string;
   payload: IStateMain;
@@ -45,3 +30,24 @@ export interface ISetSuccessAction {
 }
 
 export type MainActionTypes = ISetLoadingAction | ISetErrorgAction | ISetSuccessAction;
+
+export type TResponce = {
+  data: TResponceUsers;
+};
+
+export type TResponceUsers = {
+  search: TNodes;
+};
+
+export type TNodes = {
+  nodes: TData[];
+};
+
+export type TData = {
+  id: string;
+  name: string;
+  login: string;
+  avatarUrl: string;
+  url: string;
+  bio: string;
+};

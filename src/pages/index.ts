@@ -1,5 +1,5 @@
 import MainPage from '@/pages/MainPage';
 import RoutesPages from '@/pages/RoutesPages';
-import EmployeesPage from '@/pages/SecondPage';
+import UserPage from '@/pages/UserPage';
 
-export { MainPage, EmployeesPage, RoutesPages };
+export { MainPage, UserPage, RoutesPages };

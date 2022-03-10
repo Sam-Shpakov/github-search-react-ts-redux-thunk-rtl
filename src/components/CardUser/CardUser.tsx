@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import React from 'react';
 import type { FunctionComponent } from 'react';
 
@@ -9,7 +11,27 @@ export interface ListUsersProps {
 }
 
 const CardUser: FunctionComponent<ListUsersProps> = ({ data }): JSX.Element => (
-  <div className={styles['card-container']}>{data.name}</div>
+  <div className={styles['card-container']}>
+    <Link to={`/${data.login}`} className={styles['card-link']}>
+      <img className={styles['card-avatar']} src={data.avatarUrl} alt="Avatar" />{' '}
+    </Link>
+    <div className={styles['card-text']}>
+      <div className={styles['card-p']}>
+        <Link to={`/user_${data.login}`} className={styles['card-nickname']}>
+          {data.login}
+        </Link>
+      </div>
+      <div className={styles['card-p']}>
+        <Link to={`/user_${data.login}`} className={styles['card-nickname']}>
+          {data.login}
+        </Link>
+        <span>sdasd</span>
+        <Link to={`/user_${data.login}`} className={styles['card-name']}>
+          {data.name}
+        </Link>
+      </div>
+    </div>
+  </div>
 );
 
 export default CardUser;
