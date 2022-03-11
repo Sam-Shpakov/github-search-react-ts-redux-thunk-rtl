@@ -60,6 +60,7 @@ html[data-theme='light'] {
   --color-btn-outline-hover-shadow: 0 1px 0 rgba(27, 31, 36, 0.1);
   --color-btn-outline-hover-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
   --color-btn-outline-hover-counter-bg: rgba(255, 255, 255, 0.2);
+  --color-avatar-border: rgba(27, 31, 36, 0.15);
 }
 
 html[data-theme='dark'] {
@@ -103,4 +104,5 @@ html[data-theme='dark'] {
   --color-btn-outline-hover-shadow: 0 1px 0 rgba(1, 4, 9, 0.1);
   --color-btn-outline-hover-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
   --color-btn-outline-hover-counter-bg: rgba(255, 255, 255, 0.2);
+  --color-avatar-border: rgba(255, 255, 255, 0.9);
 }

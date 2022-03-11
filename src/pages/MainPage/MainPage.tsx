@@ -5,11 +5,10 @@ import Header from '@/components/Header';
 import ListUsers from '@/components/ListUsers';
 import Loading from '@/components/Loading';
 import styles from '@/pages/MainPage/MainPage.scss';
-import useListData from '@/redux-folder/hooks';
+import { useListData } from '@/redux-folder/hooks';
 
 const MainPage = (): JSX.Element => {
   const { searchUsers, dataMain } = useListData();
-
   if (dataMain.error) {
     return (
       <div className={styles['main-container']}>

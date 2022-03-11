@@ -1,21 +1,50 @@
 import { gql } from '@apollo/client';
 
-const FETCH_USERS_QUERY = gql`
+const FETCH_USER_QUERY = gql`
   query GitHubUserProfile($username: String!) {
     user(login: $username) {
+      id
+      avatarUrl
       name
+      login
+      location
       company
       bio
-      twitterUsername
       websiteUrl
       url
+      followers(first: 100) {
+        totalCount
+        edges {
+          node {
+            id
+            name
+            login
+          }
+        }
+      }
+      following(first: 100) {
+        totalCount
+      }
       repositories(first: 100, privacy: PUBLIC, orderBy: { field: UPDATED_AT, direction: DESC }) {
         totalCount
         edges {
           node {
             name
+            owner {
+              id
+            }
             description
             url
+            isFork
+            forkCount
+            stargazerCount
+            pushedAt
+            licenseInfo {
+              name
+            }
+            primaryLanguage {
+              name
+            }
           }
         }
       }
@@ -23,4 +52,4 @@ const FETCH_USERS_QUERY = gql`
   }
 `;
 
-export default FETCH_USERS_QUERY;
+export default FETCH_USER_QUERY;

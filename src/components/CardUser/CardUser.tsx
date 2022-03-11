@@ -12,24 +12,23 @@ export interface ListUsersProps {
 
 const CardUser: FunctionComponent<ListUsersProps> = ({ data }): JSX.Element => (
   <div className={styles['card-container']}>
-    <Link to={`/${data.login}`} className={styles['card-link']}>
+    <Link to={`/user_${data.login}`} className={styles['card-logo']}>
       <img className={styles['card-avatar']} src={data.avatarUrl} alt="Avatar" />{' '}
     </Link>
     <div className={styles['card-text']}>
-      <div className={styles['card-p']}>
-        <span className={styles['card-name']}>Name:</span>
-        <Link to={`/user_${data.login}`} className={styles['card-link']}>
-          {data.name}
-        </Link>
+      <div className={styles['card-names']}>
+        <div className={styles['card-name']}>
+          <Link to={`/user_${data.login}`} className={styles['card-link']}>
+            {data.name}
+          </Link>
+        </div>
+        <div className={styles['card-username']}>
+          <Link to={`/user_${data.login}`} className={styles['card-link']}>
+            {data.login}
+          </Link>
+        </div>
       </div>
-      <div className={styles['card-p']}>
-        <span className={styles['card-name']}>Username:</span>
-        <Link to={`/user_${data.login}`} className={styles['card-link']}>
-          {data.login}
-        </Link>
-      </div>
-      <div className={styles['card-p']}>
-        <span className={styles['card-name']}>Biography:</span>
+      <div className={styles['card-detail']}>
         <Link to={`/user_${data.login}`} className={styles['card-link']}>
           {data.bio}
         </Link>

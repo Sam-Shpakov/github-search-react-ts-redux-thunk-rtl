@@ -1,17 +1,25 @@
-.second {
+.user {
   &-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--color-fg-default);
+    transition: background-color 200ms linear;
+    transition: color 500ms linear;
   }
 
   &-content {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: 35px;
-    font-weight: 600;
+    width: 100%;
+    height: calc(100vh - 62px);
+  }
+
+  &-body {
+    display: flex;
     width: 100%;
     height: calc(100vh - 50px);
   }

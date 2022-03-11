@@ -10,7 +10,7 @@ import LogoIcon from '@/components/icons/LogoIcon';
 const LogoInner: FunctionComponent = (): JSX.Element => (
   <div className={styles['logo-container']}>
     <Link to="/" className={styles['logo-link']}>
-      <LogoIcon className={classNames(styles['logo-icon'], styles['white'])} size="sm" />
+      <LogoIcon className={classNames(styles['logo-icon'], styles['white'])} size="md" />
     </Link>
   </div>
 );
