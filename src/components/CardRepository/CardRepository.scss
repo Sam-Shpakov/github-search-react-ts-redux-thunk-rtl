@@ -10,6 +10,8 @@
 
   &-names {
     margin: 10px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   &-name {
@@ -43,6 +45,7 @@
   &-details {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &-detail {

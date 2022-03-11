@@ -17,6 +17,10 @@
     align-items: center;
     width: 100%;
     height: calc(100vh - 62px);
+
+    @media (max-width: 720px) {
+      height: 100%;
+    }
   }
 
   &-body {
@@ -28,8 +32,9 @@
       height: 450px;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 720px) {
       flex-direction: column;
+      height: 100%;
     }
   }
 

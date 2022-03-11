@@ -7,8 +7,12 @@
     height: inherit;
     border-left: 1px solid var(--color-border-muted);
 
-    @media (max-width: 560px) {
+    background-color: var(--background-color);
+    color: var(--color-fg-default);
+
+    @media (max-width: 720px) {
       border-left: none;
+      height: 450px;
     }
   }
 
@@ -16,6 +20,7 @@
     font-size: 32px;
     font-weight: 600;
     padding: 5px;
+    color: var(--color-fg-default);
     &::first-letter {
       text-transform: uppercase;
     }
