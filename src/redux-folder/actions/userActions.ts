@@ -3,7 +3,8 @@ import { Dispatch } from 'redux';
 
 import client from '@/graphql/client';
 import * as UserRequests from '@/graphql/query';
-import { UserActionTypes, UserConstantTypes, TResponceUser, TData } from '@/types/userStore';
+import { UserConstantTypes } from '@/types/userStore';
+import type { UserActionTypes, TResponceUser, TData } from '@/types/userStore';
 import { formatServerDataToData } from '@/utils/middleware-data';
 
 const setLoading = (): UserActionTypes => ({

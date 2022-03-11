@@ -3,7 +3,8 @@ import { Dispatch } from 'redux';
 
 import client from '@/graphql/client';
 import * as UserRequests from '@/graphql/query';
-import { MainActionTypes, MainConstantTypes, TResponceUsers, TData } from '@/types/mainStore';
+import { MainConstantTypes } from '@/types/mainStore';
+import type { MainActionTypes, TResponceUsers, TData } from '@/types/mainStore';
 
 const setLoading = (): MainActionTypes => ({
   type: MainConstantTypes.GET_DATA_LOADING,

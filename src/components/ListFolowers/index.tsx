@@ -1,3 +1,3 @@
-import ListUsers from '@/components/ListUsers/ListUsers';
+import ListFolowers from '@/components/ListFolowers/ListFolowers';
 
-export default ListUsers;
+export default ListFolowers;

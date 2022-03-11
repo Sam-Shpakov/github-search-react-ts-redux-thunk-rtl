@@ -1,5 +1,8 @@
 .header {
   &-container {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
     height: 62px;
     padding: 5px 16px;
     background-color: var(--background-color-header);
@@ -19,8 +22,8 @@
   width: 150px;
 
   &-text {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 500;
     color: var(--color-header-logo);
     text-align: center;
     transition: color 500ms linear;

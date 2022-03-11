@@ -4,6 +4,8 @@ import React, { Fragment } from 'react';
 
 import Header from '@/components/Header';
 import HeaderUser from '@/components/HeaderUser';
+import ListFolowers from '@/components/ListFolowers';
+import ListRepositories from '@/components/ListRepositories';
 import Loading from '@/components/Loading';
 import styles from '@/pages/UserPage/UserPage.scss';
 import { useUserData } from '@/redux-folder/hooks';
@@ -32,8 +34,8 @@ const UserPage = (): JSX.Element => {
           <Fragment>
             <HeaderUser data={userData.data} />
             <div className={styles['user-body']}>
-              {/* <HeaderUser data={userData.data} />
-              <HeaderUser data={userData.data} /> */}
+              {userData.data.followers && <ListFolowers data={userData.data.followers} />}
+              {userData.data.repositories && <ListRepositories data={userData.data.repositories} />}
             </div>
           </Fragment>
         )}

@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import type { FunctionComponent } from 'react';
 
-import styles from '@/components/CardUser/CardUser.scss';
-import type { TData } from '@/types/mainStore';
+import styles from '@/components/CardFolower/CardFolower.scss';
+import type { TFollowers } from '@/types/userStore';
 
-export interface CardUserProps {
-  data: TData;
+export interface ListUsersProps {
+  data: TFollowers;
 }
 
-const CardUser: FunctionComponent<CardUserProps> = ({ data }): JSX.Element => (
+const CardUser: FunctionComponent<ListUsersProps> = ({ data }): JSX.Element => (
   <div className={styles['card-container']}>
     <Link to={`/user_${data.login}`} className={styles['card-logo']}>
       <img className={styles['card-avatar']} src={data.avatarUrl} alt="Avatar" />{' '}
@@ -27,11 +27,6 @@ const CardUser: FunctionComponent<CardUserProps> = ({ data }): JSX.Element => (
             {data.login}
           </Link>
         </div>
-      </div>
-      <div className={styles['card-detail']}>
-        <Link to={`/user_${data.login}`} className={styles['card-link']}>
-          {data.bio}
-        </Link>
       </div>
     </div>
   </div>

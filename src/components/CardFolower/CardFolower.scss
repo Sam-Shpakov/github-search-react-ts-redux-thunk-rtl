@@ -1,36 +1,36 @@
-.header-user {
+.card {
   &-container {
     position: relative;
     width: 90%;
     display: flex;
-    padding: 15px;
-    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
     border-bottom: 1px solid var(--color-border-muted);
 
     @media (max-width: 560px) {
-      flex-direction: column;
-      align-items: center;
       width: 90%;
     }
   }
 
   &-avatar {
     border-radius: 50%;
-    width: 270px;
-    height: 270px;
+    width: 70px;
+    height: 70px;
     box-shadow: 0 0 0 1px var(--color-avatar-border);
-    transition: box-shadow 500ms linear;
 
     @media (max-width: 560px) {
-      width: 150px;
-      height: 150px;
+      width: 40px;
+      height: 40px;
     }
   }
 
-  &-info {
-    margin: 5px 20px;
+  &-logo {
+    width: 70px;
+    height: 70px;
+
     @media (max-width: 560px) {
-      margin: 5px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -39,33 +39,30 @@
   }
 
   &-name {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 1.25;
     font-weight: 600;
   }
 
   &-username {
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 300;
     line-height: 24px;
     color: var(--color-fg-muted);
   }
 
-  &-details {
-    margin: 5px 0;
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-
-    &-text {
-      margin: 0 5px;
-    }
-  }
-
   &-detail {
     display: flex;
     margin: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
 
     &-text {
       margin: 0 5px;
@@ -77,11 +74,29 @@
       text-decoration: none;
       text-overflow: ellipsis;
       overflow: hidden;
-      transition: color 500ms linear;
       &:hover {
         color: var(--color-hover-text);
       }
     }
+  }
+
+  &-text {
+    position: relative;
+    margin: 5px 20px;
+    width: calc(90% - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-style: normal;
+
+    @media (max-width: 560px) {
+      width: calc(90% - 40px);
+      margin: 0 10px;
+    }
+  }
+
+  &-name {
+    margin-right: 15px;
   }
 
   &-link {

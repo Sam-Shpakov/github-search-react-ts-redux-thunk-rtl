@@ -1,0 +1,28 @@
+.repositories {
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    border-left: 1px solid var(--color-border-muted);
+
+    @media (max-width: 560px) {
+      border-left: none;
+    }
+  }
+
+  &-header {
+    font-size: 32px;
+    font-weight: 600;
+    padding: 5px;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &-item {
+    display: flex;
+    justify-content: center;
+  }
+}

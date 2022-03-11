@@ -19,6 +19,7 @@ const FETCH_USER_QUERY = gql`
             id
             name
             login
+            avatarUrl
           }
         }
       }

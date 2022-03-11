@@ -1,3 +1,3 @@
-import ListUsers from '@/components/ListUsers/ListUsers';
+import ListRepositories from '@/components/ListRepositories/ListRepositories';
 
-export default ListUsers;
+export default ListRepositories;

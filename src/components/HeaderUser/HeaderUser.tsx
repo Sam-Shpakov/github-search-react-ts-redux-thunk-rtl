@@ -32,20 +32,26 @@ const HeaderUser: FunctionComponent<HeaderUserProps> = ({ data }): JSX.Element =
         </div>
       </div>
       <div className={styles['header-user-details']}>
-        <div className={styles['header-user-detail']}>
-          <CompanyIcon size="sm" />
-          <span className={styles['header-user-detail-text']}>{data.company}</span>
-        </div>
-        <div className={styles['header-user-detail']}>
-          <LocationIcon size="sm" />
-          <span className={styles['header-user-detail-text']}>{data.location}</span>
-        </div>
-        <div className={styles['header-user-detail']}>
-          <UrlIcon size="sm" />
-          <a className={styles['header-user-detail-link']} href={data.websiteUrl}>
-            {data.websiteUrl}
-          </a>
-        </div>
+        {data.company && (
+          <div className={styles['header-user-detail']}>
+            <CompanyIcon size="sm" />
+            <span className={styles['header-user-detail-text']}>{data.company}</span>
+          </div>
+        )}
+        {data.location && (
+          <div className={styles['header-user-detail']}>
+            <LocationIcon size="sm" />
+            <span className={styles['header-user-detail-text']}>{data.location}</span>
+          </div>
+        )}
+        {data.websiteUrl && (
+          <div className={styles['header-user-detail']}>
+            <UrlIcon size="sm" />
+            <a className={styles['header-user-detail-link']} href={data.websiteUrl}>
+              {data.websiteUrl}
+            </a>
+          </div>
+        )}
         <div className={styles['header-user-detail']}>
           <FolowersIcon size="sm" />
           <span className={styles['header-user-detail-text']}>

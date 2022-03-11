@@ -19,7 +19,7 @@ const useUserData = (username: string) => {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [username]);
 
   return { userData };
 };

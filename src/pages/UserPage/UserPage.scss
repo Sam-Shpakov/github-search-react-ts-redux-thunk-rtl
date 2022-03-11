@@ -11,6 +11,7 @@
 
   &-content {
     position: relative;
+    margin-top: 62px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,8 +21,16 @@
 
   &-body {
     display: flex;
-    width: 100%;
-    height: calc(100vh - 50px);
+    width: 90%;
+    height: calc(100vh - 370px);
+
+    @media (max-height: 600px) {
+      height: 450px;
+    }
+
+    @media (max-width: 720px) {
+      flex-direction: column;
+    }
   }
 
   &-text {

@@ -106,6 +106,7 @@ export type TFollowers = {
   id: string;
   name: string;
   login: string;
+  avatarUrl: string;
 };
 
 export type TFollowing = {

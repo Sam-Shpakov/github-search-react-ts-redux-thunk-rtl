@@ -4,7 +4,7 @@ import type { FunctionComponent } from 'react';
 import CardUser from '@/components/CardUser';
 import CustomizedScrollBar from '@/components/CustomizedScrollBar';
 import styles from '@/components/ListUsers/ListUsers.scss';
-import { TData } from '@/types/mainStore';
+import type { TData } from '@/types/mainStore';
 
 export interface ListUsersProps {
   data: TData[];
