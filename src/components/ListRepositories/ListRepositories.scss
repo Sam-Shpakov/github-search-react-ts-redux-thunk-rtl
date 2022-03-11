@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     height: inherit;
+    margin-top: 10px;
     border-left: 1px solid var(--color-border-muted);
 
     background-color: var(--background-color);
@@ -12,18 +13,26 @@
 
     @media (max-width: 720px) {
       border-left: none;
-      height: 450px;
+      height: 550px;
     }
   }
 
   &-header {
     font-size: 32px;
     font-weight: 600;
-    padding: 5px;
+    padding: 25px 5px;
     color: var(--color-fg-default);
     &::first-letter {
       text-transform: uppercase;
     }
+  }
+
+  &-list {
+    border: 1px solid var(--color-border-muted);
+    height: 456px;
+    margin: 0 5px;
+    overflow: hidden;
+    border-radius: 3px;
   }
 
   &-item {

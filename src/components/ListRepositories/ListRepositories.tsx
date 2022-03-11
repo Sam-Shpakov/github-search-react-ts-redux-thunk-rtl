@@ -13,13 +13,15 @@ export interface ListRepositoriesProps {
 const ListRepositories: FunctionComponent<ListRepositoriesProps> = ({ data }): JSX.Element => (
   <div className={styles['repositories-container']}>
     <div className={styles['repositories-header']}>repositories</div>
-    <CustomizedScrollBar>
-      {data.map(item => (
-        <div className={styles['repositories-item']} key={item.name}>
-          <CardRepository data={item} />
-        </div>
-      ))}
-    </CustomizedScrollBar>
+    <div className={styles['repositories-list']}>
+      <CustomizedScrollBar>
+        {data.map(item => (
+          <div className={styles['repositories-item']} key={item.name}>
+            <CardRepository data={item} />
+          </div>
+        ))}
+      </CustomizedScrollBar>
+    </div>
   </div>
 );
 

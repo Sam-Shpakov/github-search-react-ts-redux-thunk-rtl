@@ -13,13 +13,15 @@ export interface ListFolowersProps {
 const ListFolowers: FunctionComponent<ListFolowersProps> = ({ data }): JSX.Element => (
   <div className={styles['folowers-container']}>
     <div className={styles['folowers-header']}>folowers</div>
-    <CustomizedScrollBar>
-      {data.map(item => (
-        <div className={styles['folowers-item']} key={item.id}>
-          <CardFolower data={item} />
-        </div>
-      ))}
-    </CustomizedScrollBar>
+    <div className={styles['folowers-list']}>
+      <CustomizedScrollBar>
+        {data.map(item => (
+          <div className={styles['folowers-item']} key={item.id}>
+            <CardFolower data={item} />
+          </div>
+        ))}
+      </CustomizedScrollBar>
+    </div>
   </div>
 );
 
