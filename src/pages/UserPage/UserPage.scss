@@ -21,6 +21,10 @@
     @media (max-width: 720px) {
       height: 100%;
     }
+
+    @media (max-height: 720px) {
+      height: 100%;
+    }
   }
 
   &-body {
@@ -28,7 +32,7 @@
     width: 90%;
     height: calc(100vh - 370px);
 
-    @media (max-height: 600px) {
+    @media (max-height: 720px) {
       height: 450px;
     }
 
