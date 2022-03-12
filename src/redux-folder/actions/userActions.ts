@@ -5,7 +5,7 @@ import client from '@/graphql/client';
 import * as UserRequests from '@/graphql/query';
 import { UserConstantTypes } from '@/types/userStore';
 import type { UserActionTypes, TResponceUser, TData } from '@/types/userStore';
-import { formatServerDataToData } from '@/utils/middleware-data';
+import { formatServerUserDataToData } from '@/utils/middleware-user';
 
 const setLoading = (): UserActionTypes => ({
   type: UserConstantTypes.GET_DATA_LOADING,
@@ -34,7 +34,7 @@ const getUser = (username: string) => (dispatch: Dispatch<UserActionTypes>) => {
     })
     .then(({ data }: ApolloQueryResult<any>) => {
       const newData = data as TResponceUser;
-      dispatch(setSuccess(formatServerDataToData(newData.user)));
+      dispatch(setSuccess(formatServerUserDataToData(newData.user)));
     })
     .catch((error: IError) => {
       dispatch(setError(error));

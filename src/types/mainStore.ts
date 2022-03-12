@@ -40,7 +40,17 @@ export type TResponceUsers = {
 };
 
 export type TNodes = {
-  nodes: TData[];
+  nodes: TFetchData[];
+};
+
+export type TFetchData = {
+  __typename: string;
+  id: string;
+  name: string;
+  login: string;
+  avatarUrl: string;
+  url: string;
+  bio: string;
 };
 
 export type TData = {

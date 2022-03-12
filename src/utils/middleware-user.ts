@@ -1,7 +1,7 @@
 import type { TFetchData, TData, TFollowers, TRepositories } from '@/types/userStore';
 import { formatDate } from '@/utils/date-format';
 
-const formatServerDataToData = (data: TFetchData): TData => {
+const formatServerUserDataToData = (data: TFetchData): TData => {
   const newfollowers: TFollowers[] = data.followers.edges.map(item => ({
     id: item.node.id,
     name: item.node.name,
@@ -34,4 +34,4 @@ const formatServerDataToData = (data: TFetchData): TData => {
   return formatData;
 };
 
-export { formatServerDataToData };
+export { formatServerUserDataToData };

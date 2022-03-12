@@ -5,6 +5,7 @@ import client from '@/graphql/client';
 import * as UserRequests from '@/graphql/query';
 import { MainConstantTypes } from '@/types/mainStore';
 import type { MainActionTypes, TResponceUsers, TData } from '@/types/mainStore';
+import { formatServerUsersDataToData } from '@/utils/middleware-users';
 
 const setLoading = (): MainActionTypes => ({
   type: MainConstantTypes.GET_DATA_LOADING,
@@ -33,7 +34,7 @@ const searchUsers = (user: string) => (dispatch: Dispatch<MainActionTypes>) => {
     })
     .then(({ data }: ApolloQueryResult<any>) => {
       const newData = data as TResponceUsers;
-      dispatch(setSuccess(newData.search.nodes));
+      dispatch(setSuccess(formatServerUsersDataToData(newData.search.nodes)));
     })
     .catch((error: IError) => {
       dispatch(setError(error));
